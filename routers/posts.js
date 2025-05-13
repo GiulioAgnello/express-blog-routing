@@ -1,16 +1,15 @@
 const express = require("express");
 const router = express.Router();
-port = 3000;
 
 // index
-router.get(`/posts/`, (req, res) => {
+router.get(`/`, (req, res) => {
   res.send(`lista dei post`);
 });
 
 // show
-router.get(`/post/:id`, (req, res) => {
+router.get(`/:id`, (req, res) => {
   const post = req.params.id;
-  res.sed(`post n ${post}`);
+  res.send(`post n ${post}`);
 });
 
 // export
