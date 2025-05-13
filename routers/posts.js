@@ -12,5 +12,28 @@ router.get("/:id", (req, res) => {
   res.json(`post n ${post}`);
 });
 
+// store
+router.post(`/`, (req, res) => {
+  res.json(`crea nuovo post`);
+});
+
+// update
+router.put("/:id", (req, res) => {
+  const post = req.params.id;
+  res.json(`modifica completa post n ${post}`);
+});
+
+// modify
+router.patch("/:id", (req, res) => {
+  const post = req.params.id;
+  res.json(`modifica parziale post n ${post}`);
+});
+
+// destroy
+router.delete("/:id", (req, res) => {
+  const post = req.params.id;
+  res.json(`eliminazione del post n ${post}`);
+});
+
 // export
 module.exports = router;
