@@ -1,6 +1,6 @@
 // import
 const { posts } = require("./db");
-const postsRouter = require(`./routers/posts`);
+const postsRouter = require("./routers/posts");
 // install express e port
 const express = require("express");
 const app = express();
@@ -8,8 +8,7 @@ const port = 3000;
 const url = `http://localhost:${port}`;
 
 // accesso all routers
-
-app.use("/posts", postsRouter);
+app.use(postsRouter);
 
 // cartella public disponibile
 app.use(express.static("public"));

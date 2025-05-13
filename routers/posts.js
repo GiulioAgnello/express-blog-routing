@@ -3,13 +3,13 @@ const router = express.Router();
 
 // index
 router.get(`/`, (req, res) => {
-  res.send(`lista dei post`);
+  res.json(`lista dei post`);
 });
 
 // show
-router.get(`/:id`, (req, res) => {
+router.get("/:id", (req, res) => {
   const post = req.params.id;
-  res.send(`post n ${post}`);
+  res.json(`post n ${post}`);
 });
 
 // export
